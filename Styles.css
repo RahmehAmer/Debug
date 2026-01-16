@@ -357,7 +357,7 @@ body {
 .benefits-subtitle {
   font-family: "Tajawal", sans-serif;
   font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-color);
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -579,6 +579,413 @@ h2.benefits-intro {
   .central-image {
     width: 240px;
     height: 240px;
+  }
+}
+
+/* Buffets Section */
+.buffets {
+  padding: 8rem 0 4rem;
+  background-color: var(--bg-color);
+}
+
+.buffets-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.buffets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.buffet-card {
+  position: relative;
+  background-color: #faf8f4;
+  border-radius: 8px 12px 12px 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(196, 90, 46, 0.1);
+}
+
+.buffet-card:hover {
+  transform: translateY(-4px) rotate(1deg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15), 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.buffet-lunch {
+  background: linear-gradient(135deg, #faf8f4 0%, #f5f1ea 50%, #e8dcc0 100%);
+}
+
+.buffet-dinner {
+  background: linear-gradient(135deg, #f0ebe2 0%, #e8dcc0 50%, #d4c4a8 100%);
+}
+
+.notebook-spiral {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(180deg, #e8dcc0 0%, #d4c4a8 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 1;
+}
+
+.spiral-hole {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(196, 90, 46, 0.6);
+  border-radius: 50%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.notebook-content {
+  padding: 2rem 2rem 2rem 3rem;
+  position: relative;
+}
+
+.buffet-title {
+  font-family: "Tajawal", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-cta);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.buffet-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-cta), transparent);
+}
+
+.buffet-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.buffet-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.buffet-item:hover {
+  background-color: rgba(196, 90, 46, 0.1);
+  transform: translateX(4px);
+}
+
+.buffet-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.buffet-text {
+  font-family: "Tajawal", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Responsive Design for Buffets */
+@media (max-width: 768px) {
+  .buffets {
+    padding: 7rem 0 3rem;
+  }
+
+  .buffets-container {
+    padding: 0 1.5rem;
+  }
+
+  .buffets-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .buffet-card {
+    border-radius: 6px 10px 10px 6px;
+  }
+
+  .notebook-spiral {
+    width: 16px;
+  }
+
+  .notebook-content {
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+  }
+
+  .buffet-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .buffet-items {
+    gap: 0.75rem;
+  }
+
+  .buffet-item {
+    gap: 0.5rem;
+    padding: 0.4rem;
+  }
+
+  .buffet-icon {
+    font-size: 1.3rem;
+  }
+
+  .buffet-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .buffets {
+    padding: 6rem 0 2.5rem;
+  }
+
+  .buffets-container {
+    padding: 0 1rem;
+  }
+
+  .buffets-grid {
+    gap: 1.5rem;
+  }
+
+  .notebook-spiral {
+    width: 14px;
+    padding: 0.75rem 0;
+  }
+
+  .spiral-hole {
+    width: 6px;
+    height: 6px;
+  }
+
+  .notebook-content {
+    padding: 1.25rem 1.25rem 1.25rem 2rem;
+  }
+
+  .buffet-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .buffet-items {
+    gap: 0.5rem;
+  }
+
+  .buffet-item {
+    gap: 0.4rem;
+    padding: 0.3rem;
+  }
+
+  .buffet-icon {
+    font-size: 1.2rem;
+  }
+
+  .buffet-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 6rem 0 4rem;
+  background-color: var(--bg-color);
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.reviews-title {
+  font-family: "Tajawal", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background-color: rgba(245, 241, 234, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.review-customer-name {
+  font-family: "Tajawal", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-cta);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(196, 90, 46, 0.2);
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.review-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.5rem;
+  text-align: right;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.review-toggle:hover {
+  background-color: rgba(196, 90, 46, 0.05);
+}
+
+.review-question {
+  font-family: "Tajawal", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.review-arrow {
+  font-size: 1rem;
+  color: var(--primary-cta);
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
+}
+
+.review-toggle.active .review-arrow {
+  transform: rotate(180deg);
+}
+
+.review-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background-color: rgba(196, 90, 46, 0.02);
+}
+
+.review-answer.show {
+  max-height: 200px;
+  padding: 1.5rem;
+}
+
+.review-answer p {
+  font-family: "Tajawal", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Responsive Design for Reviews */
+@media (max-width: 768px) {
+  .reviews {
+    padding: 3rem 0;
+  }
+
+  .reviews-container {
+    padding: 0 1.5rem;
+  }
+
+  .reviews-title {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .review-customer-name {
+    font-size: 0.8rem;
+  }
+
+  .review-toggle {
+    padding: 1.25rem;
+  }
+
+  .review-question {
+    font-size: 1rem;
+  }
+
+  .review-answer.show {
+    max-height: 250px;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews {
+    padding: 2.5rem 0;
+  }
+
+  .reviews-container {
+    padding: 0 1rem;
+  }
+
+  .reviews-title {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .review-customer-name {
+    font-size: 0.75rem;
+  }
+
+  .review-toggle {
+    padding: 1rem;
+  }
+
+  .review-question {
+    font-size: 0.95rem;
+  }
+
+  .review-answer.show {
+    max-height: 300px;
+    padding: 1rem;
+  }
+
+  .review-answer p {
+    font-size: 0.9rem;
   }
 }
 

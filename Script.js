@@ -97,3 +97,21 @@ themeToggle.addEventListener("click", () => {
   themeIcon.textContent = themeIcons[currentThemeIndex];
 });
 
+// Reviews Toggle Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const reviewToggles = document.querySelectorAll(".review-toggle");
+
+  reviewToggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const reviewId = toggle.getAttribute("data-review");
+      const answerElement = document.getElementById(`review-${reviewId}`);
+
+      // Toggle active class on button
+      toggle.classList.toggle("active");
+
+      // Toggle show class on answer
+      answerElement.classList.toggle("show");
+    });
+  });
+});
+
